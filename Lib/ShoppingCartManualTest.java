@@ -63,7 +63,7 @@ public class ShoppingCartManualTest {
 
         // Test 5: BOGO ซื้อ 1 แถม 1
         ArrayList<CartItem> bogoCart = new ArrayList<>();
-        bogoCart.add(new CartItem("BOGO", "Toothbrush", 30.0, 3)); // จ่าย 2 ชิ้น = 60
+        bogoCart.add(new CartItem("BOGO", "Baby Powder", 30.0, 3));
         double total5 = ShoppingCartCalculator.calculateTotalPrice(bogoCart);
         if (total5 == 60.0) {
             System.out.println("PASSED: BOGO test passed (3 items → pay 2 × 30 = 60)");
@@ -75,7 +75,7 @@ public class ShoppingCartManualTest {
 
         // Test 6: BULK ซื้อ 6 ลด 10%
         ArrayList<CartItem> bulkCart = new ArrayList<>();
-        bulkCart.add(new CartItem("BULK", "Notebook", 100.0, 6)); // 600 - 10% = 540
+        bulkCart.add(new CartItem("BULK", "Rice", 100.0, 6)); 
         double total6 = ShoppingCartCalculator.calculateTotalPrice(bulkCart);
         if (total6 == 540.0) {
             System.out.println("PASSED: BULK discount applied correctly (6×100 -10%)");
